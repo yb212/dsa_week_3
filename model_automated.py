@@ -37,7 +37,7 @@ def get_model():
     print(recall)
     print()
     print("We can now begin using the model in practice. Enter the candidate info below to receive a prediction.")
-
+    print("hey im here")
     return log_clf
 
 def get_prediction(classifier,sample):
