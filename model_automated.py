@@ -6,8 +6,7 @@ from sklearn.metrics import recall_score
 
 def get_model():
     #getting the data
-    url = 'https://raw.githubusercontent.com/Yeshiva-University-CS/BogomilskyYehuda/master/DataScienceApplied/Assignment_2_and_3/aug_train.csv?token=AMJB5PHBTFXCQTFSUF75GATBMUBY2'
-    full_data = pd.read_csv(url)
+    full_data = pd.read_csv('aug_train.csv')
 
     #getting the columns we want
     X = full_data[['city_development_index','enrolled_university','relevent_experience','education_level','last_new_job','experience', 'target']]
