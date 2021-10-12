@@ -23,21 +23,11 @@ def get_model():
 
     #train/test splitting the data
     train_x, test_x, train_y, test_y = train_test_split(one_hot_x, y, test_size=0.30, random_state = 1)
-    print("Training the model...")
-    print()
+    
     #creating and training our model
     log_clf = LogisticRegression(random_state=42).fit(train_x, train_y)
     log_predict = log_clf.predict(test_x)
-    print("The model precision is:")
-    precision = precision_score(test_y, log_predict)
-    print(precision)
-    print()
-    print("The model recall is:")
-    recall = recall_score(test_y, log_predict)
-    print(recall)
-    print()
-    print("We can now begin using the model in practice. Enter the candidate info below to receive a prediction.")
-    print("hey im here")
+    
     return log_clf
 
 def get_prediction(classifier,sample):
